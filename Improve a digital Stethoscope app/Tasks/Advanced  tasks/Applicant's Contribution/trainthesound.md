@@ -13,27 +13,42 @@ A normal heartbeat sound has a clear pattern of “lub dub, dub lub”, with the
 
 A murmur heartbeat sound has a noise pattern whooshing, roaring, rumbling or turbulent fluid between lub to dub or dub to lub and symptoms of many heart disease.
 
+To train a model, we need to get access to a very large labelled dataset of heart and lung sounds either through collection or by using a already available dataset such as PhysioNet/CinC Challenge dataset.
+
 
 
 
 # Step 2 : Pre-Processing
 
-Most heart sound is found in low frequency components and noise in the higher frequencies.So it is ideal to apply a filter to produce more salient sound.
+Most heart sound is found in low frequency components and noise in the higher frequencies.So it is ideal to apply methods such as filtering, normalisation and segmentation to produce more salient sound which will affect our model performance positively.
+
+
+# Step 3 : Feature Extraction
 
 Extracting and identifying features  for classification such as Time Domain Features,Frequency domain features,Perceptual features and windowing features using the Mel-Frequency Cepstral Coefficients algorithm.
 
-Splitting dataset into train,test and validate dataset
+# Step 4 : Prepare the dataset
+
+Splitting dataset into train,test and validate dataset using libraries such as sckit learn.
 
 
-# Step 3 : Develop a predictive model 
-Adding necessary layers such as dense,dropout and activation layers  to a chosen model e.g sequential model
-Training the model with train dataset
+# Step 3 : Develop  predictive models.
 
+There are various machine learning models that can be used for the task, so the selection highly depends on the kind of data we have and our end goal.
+
+We can experiment with various models such as convolutional neural networks (CNNs), recurrent neural networks (RNNs), support vector machines (SVMs) and K-NN and get the best performing model model.
+
+## **I would choose to consider** a CNN because of its ability to detect patterns in complex data such as sound.
+
+I would do this by adding necessary layers such as convolutional layers to extract features by passing a filter, pooling layers to downsample the data to reduce its dimensionality, and fully connected layers to perform classification based on the features extracted by the earlier layers.
+
+# Step 4: Train the model
+  I will then train the model by feeding it a large number of sound recordings from the train dataset along with their corresponding labels. The CNN would learn to identify patterns in the data that are associated with different heart or lung conditions.
 
 # Step 4: Test  and Evaluate the model
 This will involve developing a confusion matrix to evaluate the models performance  on the test dataset.
 
-,# Step 5: Optimization of the model
+# Step 5: Optimization of the model
 Through tuning hypaparameters such as number of epochs,batch size.
 
 # Step 6: Hosting the model 
